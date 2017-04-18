@@ -1,0 +1,55 @@
+ <div id="header-container">
+    <header>
+      <h1>TODO : </h1>
+      <h3>Already <%= @hoursTotal %> hours done... and counting ! </h3>
+   </header>
+   <aside>
+    <%= form_tag('#', method: 'get') do %>
+     <%= select_tag(:month, options_for_select(
+       [
+        ['Janvier',1],['Fevrier',2],['Mars',3],['Avril',4],['Mai',5],['Juin',6],['Juillet',7],
+        ['Aout',8],['Septembre',9],['Octobre',10],['Novembre',11],['Decembre',12]
+       ]
+      ))%>
+     <%= select_tag(:year, options_for_select(
+      [
+       ['2014',2014],['2015',2015],['2016',2016],['2017',2017],['2018',2018],['2019',2019],['2020',2020]
+      ]))%>
+     <%= submit_tag('Go!') %>
+    <% end %>
+    <%= link_to 'List all lessons', lessons_path %>
+    <%= link_to 'Manage lessons',   lessons_path, id: 'manager' %>
+   </aside>
+ </div>
+ <div id="col-container">
+  <ol id>
+   <li class='day'>DD</li>
+   <li class='month'>MM</li>
+   <li class='year'>YYYY</li>
+   <li class='duration'>Length</li>
+   <li class='student'>Student</li>
+   <li class='location'>Station</li>
+   <li class='income'>Income</li>
+   <li class='fnb'>FnB</li>
+   <li class='transport'>Train</li>
+   <li class='benef'>Net</li>
+   <li class='colorvisuel'> </li>
+  </ol>
+  <%= render 'lessons/new' %>
+    <%= render @lessons %>
+
+ </div>
+ <footer>
+  <div class='positif'>
+    <h2>Total Brut :<span><%= space_on @totalBrut %></span></h2>
+    <h5>sur <%= @nbrHeures %>h et des brouettes.</h5>
+  </div>
+  <div class='negatif'>
+    <h2>Total Cost :<span><%= space_on @totalCost %></span></h2>
+    <h5>Cost FnB :<span><%= space_on @totalFnb %></span></h5>
+    <h5>Cost Transport :<span><%= space_on @totalTransport %></span></h5>
+  </div>
+  <div class='positif'>
+    <h1>Income net :<span><%= space_on @totalNet %></span></h1>
+    <h4>Net horaire :<span><%= space_on @netHoraire %></span></h4>
+ </footer>

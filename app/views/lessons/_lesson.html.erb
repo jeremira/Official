@@ -1,0 +1,24 @@
+<% net = lesson.income - lesson.fnb - lesson.transport %>
+<% brut = lesson.income %>
+<% if net > 0.9*brut %>
+<% income_class = 'green'%>
+<% elsif net > 0.8*brut %>
+<% income_class = 'orange' %>
+<% else  %>
+<% income_class = 'red' %>
+<% end %>
+
+<ol>
+  <li class='day'><%= lesson.day %></li>
+  <li class='month'><%= lesson.month %></li>
+  <li class='year'><%= lesson.year %></li>
+  <li class='duration'><%= lesson.duration %></li>
+  <li class='student'><%= lesson.student %></li>
+  <li class='location'><%= lesson.location %></li>
+  <li class='income'><%= space_on(lesson.income) %></li>
+  <li class='fnb'><%= space_on(lesson.fnb) %></li>
+  <li class='transport'><%= space_on lesson.transport %></li>
+  <li class='benef <%= income_class %>'><%= space_on net %></li>
+  <li class='managable'><%= link_to 'Edit', edit_lesson_path(lesson) %></li>
+  <li class='managable'><%= link_to 'Delete', lesson_path(lesson), method: :delete %></li>
+</ol>

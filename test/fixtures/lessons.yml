@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: 1
+  month: 1
+  year: 1
+  student: MyString
+  location: MyString
+  income: 1
+  fnb: 1
+  transport: 1
+  duration: 1
+
+two:
+  day: 1
+  month: 1
+  year: 1
+  student: MyString
+  location: MyString
+  income: 1
+  fnb: 1
+  transport: 1
+  duration: 1

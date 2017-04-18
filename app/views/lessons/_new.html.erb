@@ -1,0 +1,23 @@
+<%= flash[:error] %>
+<%= flash[:message] %>
+
+<%= form_for @lesson, html: {id: :newform} do |f| %>
+<ol>
+  <li class='day'><%= f.text_field :day %></li>
+  <li class='month'><%= f.text_field :month%></li>
+  <li class='year'><%= f.text_field :year%></li>
+  <li class='duration'><%= f.text_field :duration%></li>
+  <li class='student'><%= f.text_field :student%></li>
+  <li class='location'><%= f.text_field :location%></li>
+  <li class='income'><%= f.text_field :income%></li>
+  <li class='fnb'><%= f.text_field :fnb%></li>
+  <li class='transport'><%= f.text_field :transport%></li>
+  <li class='colorvisuel'><%= f.submit "+", data: { disable_with: false } %> </li>
+  <li><div id="flash-error"><%= flash[:error] %><div id="flash-notice"><%= flash[:message] %></div>
+</div></li>
+  </ol>
+<% end %>
+
+<ol>
+
+</ol>

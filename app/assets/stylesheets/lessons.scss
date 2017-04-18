@@ -1,0 +1,329 @@
+// Place all the styles related to the Lessons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------------------------- */
+/* --------------      END OF    ------------- */
+/* ----------------- CSS RESET --------------- */
+/* ------------------------------------------- */
+aside form {
+	display: inline-block;
+	border: 2px solid #fafafa;
+	color: #fafafa;
+	border-radius: 25px;
+	padding: 5px;
+	margin-bottom: 15px;
+}
+
+aside select {
+		background-color: #6a67ce;
+		color: #fafafa;
+		border-radius: 25px;
+		border: 2px solid #fafafa;
+		margin-left: 2px;
+		padding: 1px 2px;
+
+}
+
+aside input[type='submit'] {
+	  margin-left: 7px;
+		border: 2px solid #fafafa;
+		border-radius: 25px;
+		color: #fafafa;
+		background-color: #6a67ce;
+		font-weight: 900;
+}
+
+.managable {
+	display: none;
+}
+
+aside a {
+	text-decoration: none;
+	color: #fafafa;
+	border: 2px solid #fafafa;
+	padding: 5px 7px;
+	margin: 10px 2px;
+	font-size: 12px;
+	font-weight: 900;
+	border-radius: 25px;
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: 900;
+	margin-top: 10px;
+	margin-left: 25px;
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: 900;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+h3 {
+	font-size: 16px;
+	font-weight: 600px;
+	margin-left: 50px;
+	margin-top: 5px;
+}
+
+h4 {
+	padding: 2px;
+  font-size: 14px;
+	font-weight: 500px;
+	padding-left: 25px;
+}
+
+h5 {
+	padding: 1px;
+	font-size: 12px;
+	font-weight: 300;
+	padding-left: 10px;
+
+}
+
+#flash-error {
+ 	color: #ff7e67;
+	width: 250px;
+	font-weight: bolder;
+	font-size: 14px;
+	margin: 2px auto;
+	text-align: center;
+}
+
+#flash-notice {
+	color: green;
+	width: 250px;
+	font-weight: bolder;
+	font-size: 14px;
+	margin: 2px auto;
+	text-align: center;
+}
+
+#header-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: inline-block;
+  background-color: #6a67ce;
+  padding: 2px;
+  height: 70px;
+  margin: 0;
+  padding: 10px;
+}
+
+#col-container {
+	display: inline-block;
+	margin: 100px auto 0 100px;
+  background-color: #fafafa;
+	width: 1000px;
+  height: 100%;
+  color: #fafafa;
+  font-weight: 600;
+}
+
+header {
+  width: 800px;
+  display: inline-block;
+  float: left;
+  height: 100px;
+}
+
+aside {
+  width: 250px;
+  display: inline-block;
+  float: left;
+  height: 100px;
+}
+
+
+ol {
+	display: inline-block;
+  color: #505050;
+}
+
+li {
+    display: inline-block;
+		float: left;
+    height: 15px;
+		line-height: 15px;
+    width: 40px;
+    text-align: center;
+}
+
+.day, .month {
+	width: 20px;
+}
+
+.student {
+  width: 150px;
+	margin-left: 20px;
+}
+
+.location {
+  width: 150px;
+}
+
+.income {
+  width: 80px;
+	margin-left: 20px;
+}
+
+.fnb {
+  width: 60px;
+}
+
+.transport {
+  width: 60px;
+}
+
+.benef {
+	color: #fafafa;
+	background-color: grey;
+	border: 2px solid #fafafa;
+	border-radius: 25px;
+	width: 80px;
+	margin-left: 150px;
+}
+
+#newform {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+}
+
+#newform ol {
+	display: inline-block;
+	margin-top: 10px;
+	height: 30px;
+}
+
+#newform ol li {
+	float: left;
+	height: 20px;
+}
+
+#newform input {
+	border: 1px solid #505050;
+	width: 80%;
+	height: 16px;
+}
+
+#newform input[type='submit'] {
+	position: absolute;
+	bottom: 5px;
+	width: 30px;
+	height: 30px;
+	border: 3px solid #3be8b0;
+	border-radius: 25px;
+	color: #3be8b0;
+	background-color: #fff;
+	font-size: 22px;
+	font-weight: bolder;
+	margin-left: 20px;
+}
+
+footer {
+	background-color: #ffb900;
+	display: inline-block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 65px;
+}
+
+footer div {
+	position: relative;
+	color: black;
+	float: left;
+	width: 400px;
+	padding-left: 10px;
+}
+
+span {
+	position: absolute;
+	right: 100px;
+	width: 150px;
+	text-align: right;
+	padding-left: 20px;
+}
+
+.positif span {
+	color: green;
+}
+
+.negatif span {
+	color: red;
+}
+
+.red {
+	background-color: red;
+	border-color: red;
+}
+
+.orange {
+	background-color: orange;
+	border-color: orange;
+}
+
+.green {
+	background-color: green;
+	border-color: green;
+}
